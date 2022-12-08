@@ -1,12 +1,14 @@
 <!--pages/index/index.wxml-->
 
 <view class="container">
-  <image class="bgPic" wx:if="{{bgPic}}" src="{{bgPic}}"></image>
-  <view class="emptyBg" wx:else></view>
+  <image class="avatar" wx:if="{{avatarUrl}}" src="{{avatarUrl}}" mode="aspectFill"></image>
+  <view class="emptyBg" wx:else>请添加图片</view>
 </view>
 <view class="btnContainer">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">选择头像</button>
+  <button bindtap="onChoosePic">本机照片</button>
   <button data-way="avatar" bind:tap="getAvatar">使用头像</button>
-  <button data-way="camera" bind:tap="chooseImage">使用相机</button>
-  <button data-way="album" bind:tap="chooseImage">相册选择</button>
+  <!-- <button data-way="camera" bind:tap="chooseImage">使用相机</button>
+  <button data-way="album" bind:tap="chooseImage">相册选择</button> -->
   <button bind:tap="nextPage" disabled="{{!picChoosed}}">下一步</button>
 </view>

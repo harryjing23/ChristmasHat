@@ -1,17 +1,20 @@
 // pages/index/index.js
 const app = getApp();
+const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+var a = ''
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    bgPic:null,
-    picChoosed:false
+    picChoosed:false,
+    avatarUrl: null,
   },
 
   assignPicChoosed() {
-    if (this.data.bgPic) {
+    if (this.data.avatarUrl) {
       this.setData({
         picChoosed: true
       })
@@ -24,7 +27,7 @@ Page({
   getAvatar() {
     if (app.globalData.userInfo) {
       this.setData({
-        bgPic: app.globalData.userInfo.avatarUrl,
+        avatarUrl: app.globalData.userInfo.avatarUrl,
       });
       this.assignPicChoosed();
     } else {
@@ -34,7 +37,7 @@ Page({
           app.globalData.userInfo = res.userInfo;
           this.setData({
             userInfo: res.userInfo,
-            bgPic: res.userInfo.avatarUrl
+            avatarUrl: res.userInfo.avatarUrl
           });
           this.assignPicChoosed();
         }
@@ -49,7 +52,7 @@ Page({
       success:(res)=> {
         var tempFilePaths = res.tempFilePaths;
         this.setData({
-          bgPic:res.tempFilePaths[0]
+          avatarUrl:res.tempFilePaths[0]
         });
         this.assignPicChoosed();
       },
@@ -62,9 +65,29 @@ Page({
     })
   },
   nextPage(){
-      app.globalData.bgPic=this.data.bgPic;
+      app.globalData.avatarUrl=this.data.avatarUrl;
       wx.navigateTo({
         url: '../imageeditor/imageeditor',
       })
+  },
+  onChooseAvatar(e) {
+    console.log(e)
+    const { avatarUrl } = e.detail 
+    this.setData({
+      avatarUrl,
+    })
+  },
+  onChoosePic(e){
+    var page = this
+    wx.chooseMedia({
+      count: 1,
+      mediaType: ['image'],
+      sizeType: ['original'],
+      success(res){
+        page.setData({
+          avatarUrl: res.tempFiles[0].tempFilePath
+        })
+      }
+    })
   }
 })
