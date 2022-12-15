@@ -119,6 +119,8 @@ Page({
     app.globalData.hat_center_x = this.hat_center_x;
     app.globalData.hat_center_y = this.hat_center_y;
     app.globalData.currentHatId = this.data.currentHatId;
+    // console.log(app.globalData.hat_center_x);
+    // console.log(app.globalData.hat_center_y);
     wx.navigateTo({
       url: '../combine/combine',
     })

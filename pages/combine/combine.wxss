@@ -1,1 +1,22 @@
-/* pages/combine/combine.wxss */
+.container{
+  /* 宽度750rpx=100% */
+  width: 750rpx;
+  height:750rpx;
+  display: flex;
+  justify-content: center;  /*水平*/
+  align-items: center; /*垂直*/
+  background-color: #1F9678;
+}
+
+.myCanvas{
+  height:300px;
+  width:300px;
+  /* border: 2px solid #F9B62A; */
+  display: flex;
+  justify-content: center;  /*水平*/
+  align-items: center; /*垂直*/
+}
+
+button{
+  margin: 10px 20px 0px 20px;
+}

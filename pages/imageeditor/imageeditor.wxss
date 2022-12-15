@@ -9,16 +9,15 @@
 .bg{
   position: absolute;
   z-index:0;
-  height:600rpx;
-  width:600rpx;
-  border: 2px solid #F9B62A;
+  height:300px;
+  width:300px;
+  /* border: 2px solid #F9B62A; */
   display: flex;
   justify-content: center;  /*水平*/
   align-items: center; /*垂直*/
 }
 button{
-  margin-top:10px;
-
+  margin: 10px 20px 0px 20px;
 }
 .hat{ 
   height: 100px;
