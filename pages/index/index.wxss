@@ -4,31 +4,35 @@
   width:100%;
   height:300px;
 } */
-button{
+button {
   margin: 10px 20px 0px 20px;
 }
-.container{
+.container {
   /* 宽度750rpx=100% */
   width: 750rpx;
-  height:750rpx;
+  height: 750rpx;
   display: flex;
-  justify-content: center;  /*水平*/
+  justify-content: center; /*水平*/
   align-items: center; /*垂直*/
-  background-color: #1F9678;
+  background-color: #1f9678;
 }
-.avatar,.emptyBg{
-  height:300px;
-  width:300px;
+.avatar,
+.emptyBg {
+  height: 300px;
+  width: 300px;
   /* border: 2px solid #F9B62A; */
   display: flex;
-  justify-content: center;  /*水平*/
+  justify-content: center; /*水平*/
   align-items: center; /*垂直*/
 }
-.emptyBg{
-  background-color: #C22F37;
-  color: white
+.emptyBg {
+  background-color: #c22f37;
+  color: white;
+  display: flex;
+  justify-content: center; /*水平*/
+  align-items: center; /*垂直*/
 }
 
-.btnNext{
+.btnNext {
   color: #09bb07;
 }

@@ -20,6 +20,30 @@ Page({
     scale: 1,
     rotate: 0,
   },
+  onShareAppMessage: function (object) {
+    console.log(object);
+    // 页面被用户分享时执行
+    // const promise = new Promise((resolve) => {
+    //   setTimeout(() => {
+    //     resolve({
+    //       title: "自定义转发标题",
+    //     });
+    //   }, 2000);
+    // });
+    return {
+      title: "快来制作节日头像吧",
+      // path: "/page/user?id=123",
+      // promise,
+    };
+  },
+  onShareTimeline: function () {
+    // 页面分享到朋友圈
+    return {
+      title: "快来制作节日头像吧",
+      // query,
+      // imageUrl,
+    };
+  },
   onLoad() {
     this.setData({
       avatarUrl: app.globalData.avatarUrl,

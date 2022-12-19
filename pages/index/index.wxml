@@ -2,7 +2,9 @@
 
 <view class="container">
   <image class="avatar" wx:if="{{avatarUrl}}" src="{{avatarUrl}}" mode="aspectFill"></image>
-  <view class="emptyBg" wx:else>请添加图片</view>
+  <view class="emptyBg" wx:else>
+    <text>最新版本不推荐使用“微信头像”</text>
+  </view>
 </view>
 <view class="btnContainer">
   <button bindtap="onChoosePic">相机/相册</button>
