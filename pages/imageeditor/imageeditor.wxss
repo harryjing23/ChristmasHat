@@ -1,46 +1,47 @@
-.container{
+.container {
   width: 750rpx;
-  height:750rpx;
+  height: 750rpx;
   display: flex;
-  justify-content: center;  /*水平*/
+  justify-content: center; /*水平*/
   align-items: center; /*垂直*/
-  background-color: #1F9678;
+  background-color: #1f9678;
 }
-.bg{
+.bg {
   position: absolute;
-  z-index:0;
-  height:300px;
-  width:300px;
+  z-index: 0;
+  height: 300px;
+  width: 300px;
   /* border: 2px solid #F9B62A; */
   display: flex;
-  justify-content: center;  /*水平*/
+  justify-content: center; /*水平*/
   align-items: center; /*垂直*/
 }
-button{
+button {
   margin: 10px 20px 0px 20px;
 }
-.hat{ 
+.hat {
   height: 100px;
   width: 100px;
   position: absolute;
   border: dashed 2px yellow;
-  top:100px;
+  top: 100px;
 }
-.handle,.cancel{
+.handle,
+.cancel {
   position: absolute;
   z-index: 1;
-  width:20px;
-  height:20px;
+  width: 20px;
+  height: 20px;
 }
-.scrollView{
-   width: 100%; 
-   position: absolute;
-   bottom: 5px;
-   white-space: nowrap;
+.scrollView {
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  white-space: nowrap;
 }
-.imgList{
+.imgList {
   height: 70px;
   width: 70px;
-  border:2px solid;
+  border: 2px solid #c22f37;
   margin: 5px;
 }
