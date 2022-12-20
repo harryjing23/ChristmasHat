@@ -3,9 +3,13 @@
 <view class="container">
   <image class="avatar" wx:if="{{avatarUrl}}" src="{{avatarUrl}}" mode="aspectFill"></image>
   <view class="emptyBg" wx:else>
-    <text>最新版本不推荐使用“微信头像”</text>
   </view>
 </view>
+
+<view class="tip_container">
+  <text class="tip">提示：建议使用“相机/相册”</text>
+</view>
+
 <view class="btnContainer">
   <button bindtap="onChoosePic">相机/相册</button>
   <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">微信头像</button>

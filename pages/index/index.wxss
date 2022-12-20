@@ -36,3 +36,13 @@ button {
 .btnNext {
   color: #09bb07;
 }
+
+.tip_container {
+  display: flex;
+  justify-content: center; /*水平*/
+  align-items: center; /*垂直*/
+}
+
+.tip {
+  color: #c22f37;
+}
