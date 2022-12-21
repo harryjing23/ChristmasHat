@@ -2,8 +2,8 @@
 
 <view class="container">
   <image class="avatar" wx:if="{{avatarUrl}}" src="{{avatarUrl}}" mode="aspectFill"></image>
-  <view class="emptyBg" wx:else>
-  </view>
+  <image class="empty" wx:else src="/image/home_avatar.jpg">
+  </image>
 </view>
 
 <view class="tip_container">

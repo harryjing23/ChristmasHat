@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    avatarUrl: "/image/home_avatar.jpg",
+    avatarUrl: null,
   },
   onShareAppMessage: function (object) {
     console.log(object);
